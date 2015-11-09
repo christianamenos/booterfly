@@ -1,0 +1,10 @@
+.footer{
+    margin-top:$baseline;
+    padding:$baseline/2;
+    border-top:1px solid $default-color;
+    font-size:0.8em;
+    
+    &:before{
+        clear:both;
+    }
+}

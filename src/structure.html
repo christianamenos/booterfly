@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Booterfly</title>
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport">
+        <link type="image/x-icon" href="../img/favicon.ico" rel="shortcut icon">
+        <link type="text/css" rel="stylesheet" href="css/screen.css">
+
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    </head>
+    <body>
+        <!--img src="https://dl.dropboxusercontent.com/u/3364213/img.jpg" class="blur col-4" title="Test tooltip"/-->
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Getting strated</a></li>
+                    <li><a href="structure.html">Structure</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="components.html">Components</a></li>
+                </ul>
+            </nav>
+
+            <h1>Structure</h1>
+            <p>In this section we will document the structure and place the content over the page.</p>
+
+            <h2>Grid</h2>
+            <p>Grids are usefull to structure your content over the page defining zones or columns of diferent sizes. The grid is 12-column based to cover the major scenarios.</p>
+
+            <h3>Fixed grid</h3>
+            <p>This grid works responsiveness maintaining the percentage of the columns independent of the device viewport size.</p>
+            <ul>
+                <li>Use <kbd>col-X</kbd> to control column size. Where col-X is col-1 to col-12.</li>
+                <li>Use <kbd>push-X</kbd> to push X columns the next column to the right. Where push-X is push-1 to push-12.</li>
+            </ul>
+
+            <div>
+                <div class="row">
+                    <div class="col-12"><div class="demo-col">Col-12</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-12"&gt;&lt;div class="demo-col"&gt;Col-12&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-1"><div class="demo-col">Col-1</div></div>
+                    <div class="col-11"><div class="demo-col">Col-11</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-1"&gt;&lt;div class="demo-col"&gt;Col-1&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-11"&gt;&lt;div class="demo-col"&gt;Col-11&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-2"><div class="demo-col">Col-2</div></div>
+                    <div class="col-10"><div class="demo-col">Col-10</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-2"&gt;&lt;div class="demo-col"&gt;Col-2&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-10"&gt;&lt;div class="demo-col"&gt;Col-10&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-3"><div class="demo-col">Col-3</div></div>
+                    <div class="col-9"><div class="demo-col">Col-9</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-3"&gt;&lt;div class="demo-col"&gt;Col-3&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-9"&gt;&lt;div class="demo-col"&gt;Col-9&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-4"><div class="demo-col">Col-4</div></div>
+                    <div class="col-8"><div class="demo-col">Col-8</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;&lt;div class="demo-col"&gt;Col-4&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-8"&gt;&lt;div class="demo-col"&gt;Col-8&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-5"><div class="demo-col">Col-5</div></div>
+                    <div class="col-7"><div class="demo-col">Col-7</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-5"&gt;&lt;div class="demo-col"&gt;Col-5&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-7"&gt;&lt;div class="demo-col"&gt;Col-7&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-6"><div class="demo-col">Col-6</div></div>
+                    <div class="col-6"><div class="demo-col">Col-6</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-6"&gt;&lt;div class="demo-col"&gt;Col-6&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-6"&gt;&lt;div class="demo-col"&gt;Col-6&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-4"><div class="demo-col">Col-4</div></div>
+                    <div class="col-4"><div class="demo-col">Col-4</div></div>
+                    <div class="col-4"><div class="demo-col">Col-4</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;&lt;div class="demo-col"&gt;Col-4&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-4"&gt;&lt;div class="demo-col"&gt;Col-4&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-4"&gt;&lt;div class="demo-col"&gt;Col-4&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-3"><div class="demo-col">Col-3</div></div>
+                    <div class="col-3"><div class="demo-col">Col-3</div></div>
+                    <div class="col-3"><div class="demo-col">Col-3</div></div>
+                    <div class="col-3"><div class="demo-col">Col-3</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-3"&gt;&lt;div class="demo-col"&gt;Col-3&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-3"&gt;&lt;div class="demo-col"&gt;Col-3&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-3"&gt;&lt;div class="demo-col"&gt;Col-3&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-3"&gt;&lt;div class="demo-col"&gt;Col-3&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-3"><div class="demo-col">Col-3</div></div>
+                    <div class="col-6 push-3"><div class="demo-col">Col-6 Push-3</div></div>
+                </div>
+
+                <pre class="prettyprint linenums">
+  &lt;div class="row"&gt;
+    &lt;div class="col-3"&gt;&lt;div class="demo-col"&gt;Col-3&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="col-6 push-3"&gt;&lt;div class="demo-col"&gt;Col-6 Push-3&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                </pre>
+            </div>
+
+
+            <h1>Typography</h1>
+            <p>In this section we describe the styles available for the most common html tags and the visual styles that are applied.</p>
+            <h2>Headers</h2>
+            <p>H1 to H6 and its corresponding classes .h1 to .h6 ara available in case you want to stylize any element like its corresponding header.</p>
+            <div>
+                <h1>Header 1</h1>
+                <!--p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p-->
+                <h2>Header 2</h2>
+                <!--p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p-->
+                <h3>Header 3</h3>
+                <!--p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p-->
+                <h4>Header 4</h4>
+                <!--p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p-->
+                <h5>Header 5</h5>
+                <!--p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p-->
+                <h6>Header 6</h6>
+                <!--p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur tortor sed lorem malesuada accumsan. Ut ligula odio, vehicula congue risus eu, suscipit faucibus ipsum. Nulla neque metus, fermentum non lorem ac, commodo malesuada dui.</p-->
+
+                <pre class="prettyprint linenums">
+  &lt;h1&gt;Header 1&lt;/h1&gt;
+  &lt;h2&gt;Header 2&lt;/h2&gt;
+  &lt;h3&gt;Header 3&lt;/h3&gt;
+  &lt;h4&gt;Header 4&lt;/h4&gt;
+  &lt;h5&gt;Header 5&lt;/h5&gt;
+  &lt;h6&gt;Header 6&lt;/h6&gt;
+                </pre>
+            </div>
+
+            <h2>Text styles</h2>
+            <p>Booterfly also initializes paragraph and semantic elements like strong, em, strike and so on. In this section we list all of them:</p>
+
+            <h3>Paragraphs</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum libero bibendum elit volutpat, et consectetur ex elementum. Nam lobortis ullamcorper dignissim. Quisque metus tortor, bibendum quis venenatis et, finibus eu sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            </p>
+            <p>
+                Ut non arcu vitae libero porttitor auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec mattis risus turpis, sed gravida urna sodales finibus. Mauris commodo, mi non aliquet tempor, arcu mauris vulputate justo, quis feugiat enim enim non ligula. In hac habitasse platea dictumst. Fusce ac erat interdum, pulvinar libero non, lacinia mi. Pellentesque euismod ligula non sapien blandit, eu commodo elit vehicula.
+            </p>
+
+            <pre class="prettyprint linenums">
+&lt;p&gt;Your text go here.&lt;/p&gt;
+&lt;p&gt;And here.&lt;/p&gt;
+            </pre>
+
+
+            <h3>Standing Out</h3>
+            <p>
+                You can also stand out a paragraph or a div by adding <kbd>stand-out</kbd> class. It can be useful when you want to take user's attention.ç
+            </p>
+
+            <p class="stand-out">Mauris interdum libero bibendum elit volutpat, et consectetur ex elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p>Mauris interdum libero bibendum elit volutpat, et consectetur ex elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+            <pre class="prettyprint linenums">
+&lt;p class="stand-out"&gt;Your text go here.&lt;/p&gt;
+            </pre>
+
+            <h3>Bold text</h3>
+            <p>Stand out words within a sentence and make them important. It will also improve your SEO if you are able to mark your keywords. Also available as <kbd>strong</kbd> class.</p>
+
+            <p><strong>Lorem ipsum dolor sit amet.</strong></p>
+
+            <pre class="prettyprint linenums">
+&lt;p&gt;&lt;strong&gt;Lorem ipsum dolor sit amet.&lt;/strong&gt;&lt;/p&gt;
+            </pre>
+
+            <h3>Italic text</h3>
+            <p>Emphatize certains words within a sentence and make them important. It will also improve your SEO if you are able to mark your keywords. Also available as <kbd>italic</kbd> class.</p>
+
+            <p><em>Lorem ipsum dolor sit amet.</em></p>
+
+            <pre class="prettyprint linenums">
+&lt;p&gt;&lt;em&gt;Loremipsum dolor sit amet.&lt;/em&gt;&lt;/p&gt;
+            </pre>
+
+            <h3>Strike text</h3>
+            <p>It is useful when you want to mark a wrong sentence and you want users note it. Also available as <kbd>strike</kbd> class.</p>
+
+            <p><del>Lorem ipsum dolor sit amet.</del></p>
+
+            <pre class="prettyprint linenums">
+&lt;p&gt;&lt;del&gt;Lorem ipsum dolor sit amet.&lt;/del&gt;&lt;/p&gt;
+            </pre>
+
+            <h3>Underline text</h3>
+            <p>It is useful when you want to mark a wrong sentence that you wrote into the past and is no longer available but you want your user to note it. Also available as <kbd>underline</kbd> class.</p>
+
+            <p><ins>Lorem ipsum dolor sit amet.</ins></p>
+
+            <pre class="prettyprint linenums">
+&lt;p&gt;&lt;ins&gt;Lorem ipsum dolor sit amet.&lt;/ins&gt;&lt;/p&gt;
+            </pre>
+
+            <h3>Mark text</h3>
+            <p>It is useful when you want to highlight a part of a text. Also available as <kbd>highligth</kbd> class.</p>
+
+            <p><mark>Lorem ipsum dolor sit amet.</mark></p>
+
+            <pre class="prettyprint linenums">
+&lt;p&gt;&lt;mark&gt;Lorem ipsum dolor sit amet.&lt;/mark&gt;&lt;/p&gt;
+            </pre>
+
+            <h3>Small text</h3>
+            <p>As it name says redice the size of the text and mark it as less important taking care of SEO. Also available as <kbd>small</kbd> class.</p>
+
+            <p><small>Lorem ipsum dolor sit amet.</small></p>
+
+            <pre class="prettyprint linenums">
+&lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet.&lt;/small&gt;&lt;/p&gt;
+            </pre>
+
+            <h3>Sup text</h3>
+            <p>Raise and reduce letters. Very useful if you want to express formulas. Also available as <kbd>sup</kbd> class.</p>
+
+            <p>Lorem <sup>ipsum</sup> dolor sit amet.</p>
+
+            <pre class="prettyprint linenums">
+&lt;p&gt;Lorem &lt;sup&gt;ipsum&lt;/sup&gt; dolor sit amet.&lt;/p&gt;
+            </pre>
+
+            <h3>Sub text</h3>
+            <p>Fall and reduce letters. Very useful if you want to express formulas. Also available as <kbd>sub</kbd> class.</p>
+
+            <p>Lorem <sub>ipsum</sub> dolor sit amet.</p>
+
+            <pre class="prettyprint linenums">
+&lt;p&gt;Lorem &lt;sub&gt;ipsum&lt;/sub&gt; dolor sit amet.&lt;/p&gt;
+            </pre>
+
+            <h3>Pre block</h3>
+            <p>The pre block allows you to keep white spaces, tabs and line breaks into your texts. It also changes the font to a courrier style because it is usally used to show code.</p>
+            <pre>
+          This is a
+          pre block
+    test.
+            </pre>
+
+            <pre class="prettyprint linenums">
+                &lt;pre&gt;
+          This is a
+          pre block
+    test.
+                &lt;/pre&gt;
+            </pre>
+
+            <h3>Code</h3>
+            <p>This element is used to define a piece of computer code.</p>
+            <div>
+                <code>println</code> is used to print a line...
+            </div>
+            <pre class="prettyprint linenums">
+                &lt;code&gt;Code remark&lt;/code&gt;
+            </pre>
+
+            <h3>Sample</h3>
+            <p>This element is used to show the output of a piece of code.</p>
+            <div>
+                <samp>Output!</samp>
+            </div>
+            <pre class="prettyprint linenums">
+                &lt;samp&gt;Output!&lt;/samp&gt;
+            </pre>
+
+            <h3>Keyboard</h3>
+            <p>This element is used to specify a keyboard button.</p>
+            <div>
+                Push <kbd>Ctrl</kbd> button
+            </div>
+
+            <pre class="prettyprint linenums">
+                Push &lt;kbd&gt;Ctrl&lt;/kbd&gt; button
+            </pre>
+
+            <h3>Var</h3>
+            <p>This element is used to define a variable.</p>
+            <div>
+                <code>var <var>width</var> = 120;</code>
+            </div>
+            <pre class="prettyprint linenums">
+                &lt;code&gt;var &lt;var&gt; width &lt;/var&gt; = 120;&lt;/code&gt;
+            </pre>
+
+            <h2>Blockquote</h2>
+            <p>A blockquote is a block element of a great utility when you whant to cite somehone. It can also be used with a footer to specify the author, even links.</p>
+            <div>
+                <blockquote>
+                    This is a quote
+                    <footer>Footer <a href="">Link</a></footer>
+                </blockquote>
+            </div>
+            <pre class="prettyprint linenums">
+                &lt;blockquote&gt;
+                    This is a quote
+                    &lt;footer&gt;Footer &lt;a href=""&gt;Link&lt;/a&gt;&lt;/footer&gt;
+                &lt;/blockquote&gt;
+            </pre>
+
+            <h1>Alignment</h1>
+            <p>We have provided some classes that will help you to set the text to the position you want.</p>
+            <div class="txt-left">Left aligned text</div>
+            <div class="txt-center">Center aligned text</div>
+            <div class="txt-right">Right aligned text</div>
+            <div class="txt-justify">Justify aligned text</div>
+            <pre class="prettyprint linenums">
+                &lt;div class="txt-left"&gt;Left aligned text&lt;div&gt;
+                &lt;div class="txt-center"&gt;Center aligned text&lt;div&gt;
+                &lt;div class="txt-right"&gt;Right aligned text&lt;div&gt;
+                &lt;div class="txt-justify"&gt;Jistify aligned text&lt;div&gt;
+            </pre>
+
+            <h1>Displaying information</h1>
+            <p>In this section we take a look at the elements that we use to display information like lists, tables and so on.</p>
+
+            <h2>Lists</h2>
+
+            <h3>Unordered list</h3>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3
+                    <ul>
+                        <li>Subitem 1</li>
+                        <li>Subitem 2</li>
+                    </ul>
+                </li>
+            </ul>
+            <pre class="prettyprint linenums">
+                &lt;ul&gt;
+                    &lt;li&gt;Item 1&lt;/li&gt;
+                    &lt;li&gt;Item 2&lt;/li&gt;
+                    &lt;li&gt;Item 3
+                        &lt;ul&gt;
+                            &lt;li&gt;SubItem 1&lt;/li&gt;
+                            &lt;li&gt;Subitem 2&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            </pre>
+
+            <h3>Ordered list</h3>
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3
+                    <ol>
+                        <li>Subitem 1</li>
+                        <li>Subitem 2</li>
+                    </ol>
+                </li>
+            </ol>
+            <pre class="prettyprint linenums">
+                &lt;ol&gt;
+                    &lt;li&gt;Item 1&lt;/li&gt;
+                    &lt;li&gt;Item 2&lt;/li&gt;
+                    &lt;li&gt;Item 3
+                        &lt;ul&gt;
+                            &lt;li&gt;SubItem 1&lt;/li&gt;
+                            &lt;li&gt;Subitem 2&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ol&gt;
+            </pre>
+
+            <h3>Unstyled list</h3>
+            <ul class="unstyled">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <pre class="prettyprint linenums">
+                &lt;ul&gt;
+                    &lt;li&gt;Item 1&lt;/li&gt;
+                    &lt;li&gt;Item 2&lt;/li&gt;
+                    &lt;li&gt;Item 3&lt;/li&gt;
+                &lt;/ul&gt;
+            </pre>
+
+
+            <h3>Definition list</h3>
+            <dl>
+                <dt>Definition term 1</dt>
+                <dd>Definition description 1</dd>
+                <dt>Definition term 2</dt>
+                <dd>Definition description 2</dd>
+                <dt>Definition term 3</dt>
+                <dd>Definition description 3</dd>
+            </dl>
+            <pre class="prettyprint linenums">
+                &lt;dl&gt;
+                    &lt;dt&gt;Definition term 1&lt;/dt&gt;
+                    &lt;dd&gt;Description 1&lt;/dd&gt;
+                    &lt;dt&gt;Definition term 2&lt;/dt&gt;
+                    &lt;dd&gt;Description 2&lt;/dd&gt;
+                    &lt;dt&gt;Definition term 3&lt;/dt&gt;
+                    &lt;dd&gt;Description 3&lt;/dd&gt;
+                &lt;/dl&gt;
+            </pre>
+
+            <h2>Tables</h2>
+            <h3>Default</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Men (%)</th>
+                        <th>Women (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Icecream</td>
+                        <td>40%</td>
+                        <td>60%</td>
+                    </tr>
+                    <tr>
+                        <td>Fruit</td>
+                        <td>50%</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>Pasta</td>
+                        <td>75%</td>
+                        <td>25%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre class="prettyprint linenums">
+                &lt;table&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Meal&lt;/td&gt;
+                            &lt;td&gt;Man&lt;/td&gt;
+                            &lt;td&gt;Woman&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Icecream&lt;/td&gt;
+                            &lt;td&gt;40%&lt;/td&gt;
+                            &lt;td&gt;60%&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Fruit&lt;/td&gt;
+                            &lt;td&gt;50%&lt;/td&gt;
+                            &lt;td&gt;50%&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Pasta&lt;/td&gt;
+                            &lt;td&gt;75%&lt;/td&gt;
+                            &lt;td&gt;25%&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            </pre>
+
+            <h3>Stripped</h3>
+            <table class="stripped">
+                <thead>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Men (%)</th>
+                        <th>Women (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Icecream</td>
+                        <td>40%</td>
+                        <td>60%</td>
+                    </tr>
+                    <tr>
+                        <td>Fruit</td>
+                        <td>50%</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>Pasta</td>
+                        <td>75%</td>
+                        <td>25%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre class="prettyprint linenums">
+                &lt;table class="stripped"&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Meal&lt;/td&gt;
+                            &lt;td&gt;Man&lt;/td&gt;
+                            &lt;td&gt;Woman&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Icecream&lt;/td&gt;
+                            &lt;td&gt;40%&lt;/td&gt;
+                            &lt;td&gt;60%&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Fruit&lt;/td&gt;
+                            &lt;td&gt;50%&lt;/td&gt;
+                            &lt;td&gt;50%&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Pasta&lt;/td&gt;
+                            &lt;td&gt;75%&lt;/td&gt;
+                            &lt;td&gt;25%&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            </pre>
+
+            <h2>Colour</h2>
+            <h3>Fonts</h3>
+            <p>Booterfly also provide text colour classes to denotate semantical information to a text (information, danger, ans so on):</p>
+            <div>
+                <p class="txt-default"><strong>Default</strong> text</p>
+                <p class="txt-info"><strong>Info</strong> text</p>
+                <p class="txt-success"><strong>Success</strong> text</p>
+                <p class="txt-caution"><strong>Caution</strong> text</p>
+                <p class="txt-warning"><strong>Warning</strong> text</p>
+                <p class="txt-danger"><strong>Danger</strong> text</p>
+                <p class="txt-black"><strong>Black</strong> text</p>
+                <p class="txt-white"><strong>White</strong> text</p>
+            </div>
+            <pre class="prettyprint linenums">
+                &lt;p class="txt-default"&gt;&lt;strong&gt;Default&lt;/strong&gt; text&lt;/p&gt;
+                &lt;p class="txt-info"&gt;&lt;strong&gt;Info&lt;/strong&gt; text&lt;/p&gt;
+                &lt;p class="txt-success"&gt;&lt;strong&gt;Success&lt;/strong&gt; text&lt;/p&gt;
+                &lt;p class="txt-caution"&gt;&lt;strong&gt;Caution&lt;/strong&gt; text&lt;/p&gt;
+                &lt;p class="txt-warning"&gt;&lt;strong&gt;Warning&lt;/strong&gt; text&lt;/p&gt;
+                &lt;p class="txt-danger"&gt;&lt;strong&gt;Danger&lt;/strong&gt; text&lt;/p&gt;
+                &lt;p class="txt-black"&gt;&lt;strong&gt;Black&lt;/strong&gt; text&lt;/p&gt;
+                &lt;p class="txt-white"&gt;&lt;strong&gt;White&lt;/strong&gt; text&lt;/p&gt;
+            </pre>
+
+            <h3>Backgrounds</h3>
+            <p>You can also apply the previous colors (except for white and black) as lighter colours. Of course, you can always make a combination with background and colour styles:</p>
+            <div>
+                <p class="bg-default"><strong>Default</strong> background</p>
+                <p class="bg-info"><strong>Info</strong> background</p>
+                <p class="bg-success"><strong>Success</strong> background</p>
+                <p class="bg-caution"><strong>Caution</strong> background</p>
+                <p class="bg-warning"><strong>Warning</strong> background</p>
+                <p class="bg-danger"><strong>Danger</strong> background</p>
+            </div>
+            <pre class="prettyprint linenums">
+                &lt;p class="bg-default"&gt;&lt;strong&gt;Default&lt;/strong&gt; background&lt;/p&gt;
+                &lt;p class="bg-info"&gt;&lt;strong&gt;Info&lt;/strong&gt; background&lt;/p&gt;
+                &lt;p class="bg-success"&gt;&lt;strong&gt;Success&lt;/strong&gt; background&lt;/p&gt;
+                &lt;p class="bg-caution"&gt;&lt;strong&gt;Caution&lt;/strong&gt; background&lt;/p&gt;
+                &lt;p class="bg-warning"&gt;&lt;strong&gt;Warning&lt;/strong&gt; background&lt;/p&gt;
+                &lt;p class="bg-danger"&gt;&lt;strong&gt;Danger&lt;/strong&gt; background&lt;/p&gt;
+                &lt;p class="bg-black"&gt;&lt;strong&gt;Black&lt;/strong&gt; background&lt;/p&gt;
+                &lt;p class="bg-white"&gt;&lt;strong&gt;White&lt;/strong&gt; background&lt;/p&gt;
+            </pre>
+
+            <h2>Space</h2>
+            <p>An essential element on any web page is the correct use of white space. With this in mind we have added some helpful classes to set padding and margin to any element.</p>
+            <h3>Margins</h3>
+            <div class="row">
+                <div class="col-2">
+                    <h4>Without margin</h4>
+                    <ul>
+                        <li><code>.no-margin</code></li>
+                        <li><code>.no-top-margin</code></li>
+                        <li><code>.no-right-margin</code></li>
+                        <li><code>.no-bottom-margin</code></li>
+                        <li><code>.no-left-margin</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Tiny</h4>
+                    <ul>
+                        <li><code>.margin-tiny</code></li>
+                        <li><code>.margin-top-tiny</code></li>
+                        <li><code>.margin-right-tiny</code></li>
+                        <li><code>.margin-bottom-tiny</code></li>
+                        <li><code>.margin-left-tiny</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Small</h4>
+                    <ul>
+                        <li><code>.margin-small</code></li>
+                        <li><code>.margin-top-small</code></li>
+                        <li><code>.margin-right-small</code></li>
+                        <li><code>.margin-bottom-small</code></li>
+                        <li><code>.margin-left-small</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Normal</h4>
+                    <ul>
+                        <li><code>.margin-normal</code></li>
+                        <li><code>.margin-top-normal</code></li>
+                        <li><code>.margin-right-normal</code></li>
+                        <li><code>.margin-bottom-normal</code></li>
+                        <li><code>.margin-left-normal</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Big</h4>
+                    <ul>
+                        <li><code>.margin-big</code></li>
+                        <li><code>.margin-top-big</code></li>
+                        <li><code>.margin-right-big</code></li>
+                        <li><code>.margin-bottom-big</code></li>
+                        <li><code>.margin-left-big</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Huge</h4>
+                    <ul>
+                        <li><code>.margin-huge</code></li>
+                        <li><code>.margin-top-huge</code></li>
+                        <li><code>.margin-right-huge</code></li>
+                        <li><code>.margin-bottom-huge</code></li>
+                        <li><code>.margin-left-huge</code></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <h3>Paddings</h3>
+            <div class="row">
+                <div class="col-2">
+                    <h4>Without padding</h4>
+                    <ul>
+                        <li><code>.no-padding</code></li>
+                        <li><code>.no-top-padding</code></li>
+                        <li><code>.no-right-padding</code></li>
+                        <li><code>.no-bottom-padding</code></li>
+                        <li><code>.no-left-padding</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Tiny</h4>
+                    <ul>
+                        <li><code>.padding-tiny</code></li>
+                        <li><code>.padding-top-tiny</code></li>
+                        <li><code>.padding-right-tiny</code></li>
+                        <li><code>.padding-bottom-tiny</code></li>
+                        <li><code>.padding-left-tiny</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Small</h4>
+                    <ul>
+                        <li><code>.padding-small</code></li>
+                        <li><code>.padding-top-small</code></li>
+                        <li><code>.padding-right-small</code></li>
+                        <li><code>.padding-bottom-small</code></li>
+                        <li><code>.padding-left-small</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Normal</h4>
+                    <ul>
+                        <li><code>.padding-normal</code></li>
+                        <li><code>.padding-top-normal</code></li>
+                        <li><code>.padding-right-normal</code></li>
+                        <li><code>.padding-bottom-normal</code></li>
+                        <li><code>.padding-left-normal</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Big</h4>
+                    <ul>
+                        <li><code>.padding-big</code></li>
+                        <li><code>.padding-top-big</code></li>
+                        <li><code>.padding-right-big</code></li>
+                        <li><code>.padding-bottom-big</code></li>
+                        <li><code>.padding-left-big</code></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4>Huge</h4>
+                    <ul>
+                        <li><code>.padding-huge</code></li>
+                        <li><code>.padding-top-huge</code></li>
+                        <li><code>.padding-right-huge</code></li>
+                        <li><code>.padding-bottom-huge</code></li>
+                        <li><code>.padding-left-huge</code></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div style="width:120px;" class="float-left bg-info padding-normal">Left box with padding to all sides</div>
+                <div style="width:120px;" class="float-left bg-danger margin-left-big margin-top-big">Right box with a top left margin</div>
+            </div>
+
+            <pre class="prettyprint linenums">
+                &lt;div style="width:120px;" class="float-left bg-info padding-normal"&gt;Left box with padding to all sides&lt;/div&gt;
+                &lt;div style="width:120px;" class="float-left bg-danger margin-left-big margin-top-big"&gt;Right box with a top left margin&lt;/div&gt;
+            </pre>
+
+            <h2>Positioning</h2>
+            <h3>Float</h3>
+            <p>In the previous section we have used a <code>.float-left</code> class to float the elements to the right and we have also use a <code>.row</code> class to clearfix the floating elements in order to avoid them to be overlapped. But of course we can also use a <code>.float-right</code> class.</p>
+            <div class="row">
+                <div style="width:120px;" class="float-left bg-info padding-normal">Left float</div>
+                <div style="width:120px;" class="float-right bg-danger padding-normal">Right float</div>
+            </div>
+            <pre class="prettyprint linenums">
+                &lt;div style="width:120px;" class="float-left bg-info padding-normal"&gt;Left float&lt;/div&gt;
+                &lt;div style="width:120px;" class="float-right bg-danger padding-normal"&gt;Right float&lt;/div&gt;
+            </pre>
+
+            <h2>Navs</h2>
+            <div style="position:relative;padding:2em 0;margin-bottom:1em;">
+                <nav class="navbar top-fixed">
+                    <a href="" class="logo">Booterfly <small>Template in seconds</small></a>
+
+                    <ul>
+                        <li>Option 1</li>
+                        <li>Option 2
+                            <ul>
+                                <li>Suboption 1</li>
+                                <li>Suboption 2</li>
+                                <li>Suboption 3</li>
+                            </ul>
+                        </li>
+                        <li><a>Option 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div style="position:relative;background-image:url(https://dl.dropboxusercontent.com/u/3364213/img.jpg);margin-bottom:1em;padding-bottom:0.5em;">
+                <nav class="navbar white">
+                    <a href="" class="logo"><img src="https://dl.dropboxusercontent.com/u/7201689/logo.png"/></a>
+
+                    <ul>
+                        <li>Option 1</li>
+                        <li>Option 2
+                            <ul>
+                                <li>Suboption 1</li>
+                                <li>Suboption 2</li>
+                                <li>Suboption 3</li>
+                            </ul>
+                        </li>
+                        <li><a>Option 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div style="position:relative;background-image:url(https://dl.dropboxusercontent.com/u/3364213/img.jpg);margin-bottom:1em;padding-bottom:0.5em;">
+                <nav class="navbar black">
+                    <a href="" class="logo"><img src="https://dl.dropboxusercontent.com/u/7201689/logo.png"/></a>
+
+                    <ul>
+                        <li>Option 1</li>
+                        <li>Option 2
+                            <ul>
+                                <li>Suboption 1</li>
+                                <li>Suboption 2</li>
+                                <li>Suboption 3</li>
+                            </ul>
+                        </li>
+                        <li><a>Option 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+        </div>
+
+        <footer class="footer">
+            <div class="row">
+                <div class="col-6">
+                    Booterfly is a project by Enjoy Dreamers - <a href="http://enjoydreamers.com">http://enjoydreamers.com</a>
+                </div>
+
+                <div class="col-6 txt-right">
+                    <span class="icon-bitbucket"></span> Bitbucket
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

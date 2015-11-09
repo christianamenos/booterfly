@@ -1,0 +1,205 @@
+.notification{
+    position:relative;
+    padding:$baseline/2 $baseline;
+    border:1px solid $default-color;
+    margin:1em 0;
+    border-radius:$default-radius;
+
+    strong{
+        color:$default-color;
+    }
+
+    &.with-bg{
+        background-color:$default-bg-color;
+    }
+
+    &.success {
+        border-color:$success-color;
+        strong{
+            color:$success-color;
+        }
+
+        &.with-bg{
+            background-color:$success-bg-color;
+        }
+    }
+
+    &.error, &.danger {
+        border-color:$danger-color;
+        strong{
+            color:$danger-color;
+        }
+
+        &.with-bg{
+            background-color:$danger-bg-color;
+        }
+    }
+
+    &.info {
+        border-color:$info-color;
+        strong{
+            color:$info-color;
+        }
+
+        &.with-bg{
+            background-color:$info-bg-color;
+        }
+    }
+
+    &.warning {
+        border-color:$warning-color;
+        strong{
+            color:$warning-color;
+        }
+
+        &.with-bg{
+            background-color:$warning-bg-color;
+        }
+    }
+
+    &.caution {
+        border-color:$caution-color;
+        strong{
+            color:$caution-color;
+        }
+
+        &.with-bg{
+            background-color:$caution-bg-color;
+        }
+    }
+
+    &.border-left{
+        border-left-width:$alert-border-size !important;
+        border-left-style:solid !important;
+    }
+
+    &.border-top{
+        border-top-width:$alert-border-size !important;
+        border-top-style:solid !important;
+    }
+
+    &.border-right{
+        border-right-width:$alert-border-size !important;
+        border-right-style:solid !important;
+    }
+
+    &.border-bottom{
+        border-bottom-width:$alert-border-size !important;
+        border-bottom-style:solid !important;
+    }
+
+    &.no-border{
+        border-width:0;
+    }
+
+}
+
+.card{
+    position:relative;
+    padding:$baseline;
+    margin:1em 0;
+    color:$white-color;
+    background-color:$default-color;
+    @include rounded-border;
+    @include x-platform-prefix(box-shadow, 0 2px 2px 1px btn-shadow($default-color));
+    font-weight:400;
+
+    &.info {
+        background-color:$info-color;
+    }
+
+    &.success {
+        background-color:$success-color;
+    }
+
+    &.caution {
+        background-color:$caution-color;
+    }
+
+    &.warning {
+        background-color:$warning-color;
+    }
+
+    &.error, &.danger {
+        background-color:$danger-color;
+    }
+
+    &.white {
+        background-color:$white-color;
+        color:$black-bg-color;
+    }
+
+    &.black {
+        background-color:$black-bg-color;
+    }
+
+    &.solid-shadow{
+        
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($default-color));
+        
+        &.info {
+            background-color:$info-color;
+            @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($info-color));
+        }
+
+        &.success {
+            background-color:$success-color;
+            @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($success-color));
+        }
+
+        &.caution {
+            background-color:$caution-color;
+            @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($caution-color));
+        }
+
+        &.warning {
+            background-color:$warning-color;
+            @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($warning-color));
+        }
+
+        &.error, &.danger {
+            background-color:$danger-color;
+            @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($danger-color));
+        }
+
+        &.white {
+            background-color:#fff;
+            color:$black-bg-color;
+            @include x-platform-prefix(box-shadow, 0px 3px 0px $default-color);
+        }
+
+        &.black {
+            background-color:$black-bg-color;
+            @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($black-bg-color));
+        }
+    }
+    
+    [class*="icon-"].bullet{
+        position:absolute;
+        
+        &.position-top{
+            top:-1em;
+            left:50%;
+            margin-left:-1em;
+        }
+        
+        &.position-right{
+            right:-1em;
+            top:50%;
+            margin-top:-1em;
+        }
+        
+        &.position-bottom{
+            bottom:-1em;
+            left:50%;
+            margin-left:-1em;
+        }
+        
+        &.position-left{
+            left:-1em;
+            top:50%;
+            margin-top:-1em;
+        }
+        
+    }
+}

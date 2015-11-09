@@ -1,0 +1,41 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img.blur{
+    @include blur($default-blur);
+}
+
+img.sepia{
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'old-timey\'><feColorMatrix type=\'matrix\' values=\'0.14 0.45 0.05 0 0 0.12 0.39 0.04 0 0 0.08 0.28 0.03 0 0 0 0 0 1 0\'/></filter></svg>#old-timey");
+    -webkit-filter: sepia(1);
+    -webkit-filter: sepia(100%);
+    -moz-filter: sepia(100%);
+    -ms-filter: sepia(100%);
+    -o-filter: sepia(100%);
+    filter: sepia(100%);
+}
+
+img.bw{
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+img.circle{
+    @include circle;
+}
+
+img.rounded{
+    @include rounded-border;
+}
+
+.framed{
+    padding:$baseline/2;
+    border:1px solid $default-color;
+}

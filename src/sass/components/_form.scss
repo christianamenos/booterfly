@@ -1,0 +1,343 @@
+.flat{
+    border-bottom:1px solid #999;
+    display:inline-block;
+    box-shadow:none;
+    position:relative;
+    background-color:transparent !important;
+
+    input[type="text"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    select,
+    textarea{
+        width:100%;
+        border:none !important;
+        box-shadow:none !important;
+        border-radius:0 !important;
+    }
+
+    &:after{
+        position:absolute;
+        bottom:0;
+        right:0;
+        content:'';
+        width:1px;
+        height:5px;
+        background-color:#999;
+        z-index:5;
+    }
+
+    &:before{
+        position:absolute;
+        bottom:0;
+        left:0;
+        content:'';
+        width:1px;
+        height:5px;
+        background-color:#999;
+        z-index:5;
+    }
+}
+
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+    position:relative;
+    font-family:$font-family;
+    @include rounded-border($default-radius);
+    @include x-platform-prefix(box-shadow, 0px 0px 1px 0 $input-box-shadow-color inset);
+    border:1px solid $field-border-default;
+    border:none;
+    border-bottom:1px solid #999;
+    padding:$baseline/3 $baseline/2.5;
+    font-size:0.9em;
+
+    &.small{
+        font-size:0.7em;
+    }
+
+    &.big{
+        font-size:1.3em;
+    }
+
+}
+
+.field-box {
+    &.required label, label.required {
+        &:after{
+            content:" *";
+        }
+
+        &.success {
+            &:after {
+                color:$success-color;
+            }
+        }
+
+        &.error {
+            &:after {
+                color:$danger-color;
+            }   
+        }
+
+        &.info {
+            &:after {
+                color:$info-color;
+            }
+        }
+
+        &.warning {
+            &:after {
+                color:$warning-forms-color;
+            }
+        }
+    }
+}
+
+.field-box {
+    margin-bottom:$baseline/2;
+
+    label {
+        font-weight:bold;
+        display:block;
+        margin-bottom:$baseline/5;
+        &:first-letter{
+            text-transform:uppercase;
+        }
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"], 
+    textarea {
+        &:focus{
+            @include x-platform-prefix(box-shadow, 0px 0px 5px 0 $default-color);
+        }
+    }
+
+    .value-option {
+        margin-left: 0.3em;
+    }
+
+    .radio-option {
+        margin-left: 0.3em;
+    }
+
+    &.success {
+
+        label {
+            color:$success-color;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"], 
+        textarea {
+            border: 1px solid $success-color;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"], 
+        textarea {
+            &:focus {
+                @include x-platform-prefix(box-shadow, 0px 0px 5px 0 $success-color);
+            }
+        }
+    }
+
+    &.error {
+        label {
+            color:$danger-color;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"], 
+        textarea {
+            border: 1px solid $danger-color;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"], 
+        textarea {
+            &:focus {
+                @include x-platform-prefix(box-shadow, 0px 0px 5px 0 $danger-color);
+            }
+        }
+    }
+
+    &.info {
+        label {
+            color:$info-color;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"], 
+        textarea {
+            border: 1px solid $info-color;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"],
+        textarea {
+            &:focus{
+                @include x-platform-prefix(box-shadow, 0px 0px 5px 0 $info-color);
+            }
+        }
+    }
+
+    &.warning {
+        label {
+            color:$warning-forms-color;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"],
+        textarea {
+            border: 1px solid $warning-forms-color;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"], 
+        textarea {
+            &:focus {
+                @include x-platform-prefix(box-shadow, 0px 0px 5px 0 $warning-forms-color);
+            }
+        }
+    }
+
+}
+
+input[type="color"]{
+    height:3em;
+    @include x-platform-prefix(box-shadow, 0px 0px 1px 0 $input-box-shadow-color inset);
+    border:1px solid $field-border-default;
+    @include rounded-border($default-radius);
+    padding:$baseline/6;
+    cursor:pointer;
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder{
+    color: $placeholder-color;
+    text-transform:capitalize;
+}
+
+.field-info{
+    font-style:italic;
+    font-size:0.9em;
+    color:lighten($black-bg-color, 20%);
+    margin-top:$baseline/4;
+    &:first-letter{
+        text-transform:uppercase;
+    }
+}

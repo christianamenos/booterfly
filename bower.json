@@ -1,0 +1,36 @@
+{
+  "name": "Booterfly",
+  "version": "0.1.0",
+  "authors": [
+    "Enjoy Dreamers"
+  ],
+  "description": "CSS Framework",
+  "main": "booterfly.css",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "css",
+    "framework",
+    "js",
+    "gulp",
+    "bower",
+    "sass",
+    "compass"
+  ],
+  "license": "ISC",
+  "homepage": "http://enjoydreamers.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "fontawesome": "~4.3.0",
+    "SyntaxHighlighter": "~3.0.83"
+  }
+}

@@ -1,0 +1,94 @@
+@function btn-hover($color:$link-color){
+    @return darken($color, 6%);
+}
+
+@function btn-active($color:$link-color){
+    @return desaturate(lighten($color, 5%), 10%);
+}
+
+@function btn-shadow($color:$link-color){
+    @return darken($color, 10%);
+}
+
+@function hover($color:$link-color){
+    @return desaturate(darken($color, 10%), 25%);
+}
+
+@function active($color:$link-color){
+    @return desaturate(lighten($color, 15%), 25%);
+}
+
+@function dark-color($color:$link-color){
+    @return darken($color, 18%);
+}
+
+@mixin blur($value:3){
+    filter:blur(#{$value}px);
+    -webkit-filter:blur(#{$value}px);
+    -moz-filter:blur(#{$value}px);
+    -o-filter:blur(#{$value}px);
+    -ms-filter:blur(#{$value}px);
+    filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'blur\'><feGaussianBlur stdDeviation=\'#{$value}\' /></filter></svg>#blur");
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$value}');
+}
+
+@function legacy-direction($value) {
+    @if is-direction($value) == true {
+        
+    }
+
+    $conversion-map: (
+        to top          : bottom,
+        to top right    : bottom left,
+        to right top    : left bottom,
+        to right        : left,
+        to bottom right : top left,
+        to right bottom : left top,
+        to bottom       : top,
+        to bottom left  : top right,
+        to left bottom  : right top,
+        to left         : right,
+        to left top     : right bottom,
+        to top left     : bottom right
+        );
+
+    @if map-has-key($conversion-map, $value) {
+        @return map-get($conversion-map, $value);
+    }
+
+    @return 90deg - $value;
+}
+
+@function is-direction($value) {
+    $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+    $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+
+    @return $is-keyword or $is-angle;
+}
+
+@mixin linear-gradient($direction, $color-stops...){
+    @if is-direction($direction) == false {
+        $color-stops: $direction, $color-stops;
+        $direction:180deg;
+    }
+
+    background:nth(nth($color-stops, 1), 1);
+    background:-webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background:linear-gradient($direction, $color-stops);
+}
+
+@mixin x-platform-prefix($property, $value, $value2:0){
+    @if $value2 == 0 {
+        #{$property}: #{$value};
+    } @else {
+        #{$property}: #{$value}, #{$value2};
+    }
+}
+
+@mixin rounded-border($radius: $default-round){
+    border-radius:$radius;
+}
+
+@mixin circle($radius: 50%){
+    border-radius:$radius;
+}

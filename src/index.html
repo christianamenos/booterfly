@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Booterfly</title>
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport">
+        <link type="image/x-icon" href="../img/favicon.ico" rel="shortcut icon">
+        <link type="text/css" rel="stylesheet" href="css/screen.css">
+
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Getting strated</a></li>
+                    <li><a href="structure.html">Structure</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="components.html">Components</a></li>
+                </ul>
+            </nav>
+
+            <h1>Booterfly</h1>
+            <p>Booterfly is a CSS framework that allows you to start your web projects and make them look as awesome as they are.</p>
+            <p>To do so, we provide tools that will simplify your work. That way you will be able to concentrate on what is more important: Make your dreams come true.</p>
+            <p>We use <a href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a> that provides with a great amount of icons that will make you application look nice and more fiendly.</p>
+
+            <h2>Install</h2>
+            <p>In order to use Booterfly in your projects you must include the css and javascript files into them. To do so we provide you many options depending on your preferences.</p>
+
+            <h3>Manually</h3>
+            <p>You can install Booterfly downloading the CSS and JavaScript files and including them into your html or template files.</p>
+            <div>
+                <p>Compiled and minified CSS, JavaScript and Fonts.</p>
+                <a class="btn fancy" href="">Download Booterfly</a>
+            </div>
+            <div>
+                <p>Source SASS, JavaScript and font files. <strong>Requiress SASS with Compass</strong>. We use gulp to do systematic tasks <a href="#setupDevEnvironment">check our development setup</a>.</p>
+                <a class="btn fancy" href="">Download Source</a>
+            </div>
+
+            <h3>CDN</h3>
+            <p>TODO</p>
+
+            <h3>Bower</h3>
+            <p>TODO</p>
+
+            <h3>NPM</h3>
+            <p>TODO</p>
+
+            <h1>What is included</h1>
+            <p>Extracting Booterfly sources you wull get something like this:</p>
+            <ul>
+                <li>css
+                    <ul>
+                        <li>booterfly.css</li>
+                    </ul>
+                </li>
+                <li>js
+                    <ul>
+                        <li>booterfly.js</li>
+                    </ul>
+                </li>
+                <li>fonts
+                    <ul>
+                        <li>fontawesome-webfont.eot</li>
+                        <li>fontawesome-webfont.svg</li>
+                        <li>fontawesome-webfont.ttf</li>
+                        <li>fontawesome-webfont.woff</li>
+                        <li>FontAwesome.otf</li>
+                    </ul>
+                </li>
+                <li>assets</li>
+            </ul>
+
+            <h1 id="setupDevEnvironment">Development environment</h1>
+            <p>Booterfly is an open source project maintained by <a href="">EnjoyDreamers</a> and any other contributers who are interested in.</p>
+            <p>If you want to be a contributor we will be glad. You can find the public repository on <a href="">GitHub</a></p>
+
+            <h2>Install <a href="https://nodejs.org/" target="_blank" rel="nofollow">Node</a> and NPM</h2>
+            <p>We will install NodeJS that comes with a package manager named NPM that will help us to install some dependencies on our projects and which is cross-platform.</p>
+            <p>In order to install NodeJS and NPM you just have to download it from the <a href="https://nodejs.org/" target="_blank" rel="nofollow">official page</a> and follow the instructions.</p>
+
+            <h2>Install <a href="http://sass-lang.com/" target="_blank" rel="nofollow">SASS</a></h2>
+            <p>SASS is a CSS precompiler, which means that it add more sintax and features that will help you to increase the basic CSS to save you work and time. You can install it using the following command:</p>
+            <p>$ gem install sass</p>
+
+            <h2>Install components</h2>
+            <p>With booterfly we have used some third party components that help us on the developing tasks. To install them into your environment You just have to follow this command into the project folder:</p>
+            <p>$ npm install</p>
+            <p>With this command NPM will read <strong>package.json</strong> file and will install the listed dependences. We list the most importants below:</p>
+
+            <h3><a href="http://bower.io/" target="_blank" rel="nofollow">Bower</a></h3>
+            <p>Bower is an asset manager. It allows to take control over the assets we need on our projects so we can install or update them easily. We use it to download jquery, font awesome and google code prettify.</p>
+
+            <h3><a href="http://gulpjs.com/" target="_blank" rel="nofollow">Gulp</a></h3>
+            <p>Gulp is a task manager that helps automatic them so we can concentrate on what is more important.</p>
+
+            <h2>Developing</h2>
+            <p>If you want to change some properties or selectors you can change them by modifying the scss files that you will find into de <strong>sass</strong> folder. In fact we have separated the selectors and values into the <strong>components</strong> folder so it should be easier to find wat you are searching. Normally you will want to modify the values into <strong>_variables.css</strong> file located into the <strong>settings</strong> folder.</p>
+            <p>To set gulp working to listen into the changes you will only need to keep running this command into a tab of the terminal into the booterfly folder:</p>
+            <p>$ gulp</p>
+            <p>Yeah, that simple! :)</p>
+
+            <h3>What will you find</h3>
+            <p>Again, you can find our repository into github at <a href=""></a>.</p>
+            <p>If you clone/fork the repository you will find the following files and folders:</p>
+            <ul>
+                <li>src
+                    <ul>
+                        <li>assets</li>
+                        <li>css (contains the compiled css files)</li>
+                        <li>fonts (contains the fonts used in this project)</li>
+                        <li>js (contains the javascript files)</li>
+                        <li>sass (contains de sass files)
+                            <ul>
+                                <li>components</li>
+                                <li>settings</li>
+                                <li>vendors</li>
+                            </ul>
+                        </li>
+                        <li>config.rb (contains de compass configuration file)</li>
+                        <li>index.html (contains this documentation)</li>
+                    </ul>
+                </li>
+                <li>.bowerrc</li>
+                <li>.gitignore</li>
+                <li>bower.json</li>
+                <li>gulpfile.js</li>
+                <li>package.json</li>
+                <li>README.md</li>
+            </ul>
+
+            <h1>Use it into your projects</h1>
+            <p>In order to use Booterfly into your projects we provide a basic structure that you can use in your projects.</p>
+
+            <pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;title&gt;Booterfly - Basic structure&lt;/title&gt;
+
+    &lt;!-- Booterfly --&gt;
+    &lt;link href="css/booterfly.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Booterfly is setup!&lt;/h1&gt;
+
+    &lt;!-- jQuery (necessary for Booterfly's scripts) --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;!-- Include Booterfly scripts --&gt;
+    &lt;script src="js/booterfly.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+
+            <footer class="footer">
+                <div class="row">
+                    <div class="col-6">
+                        Booterfly is a project by Enjoy Dreamers - <a href="http://enjoydreamers.com">http://enjoydreamers.com</a>
+                    </div>
+
+                    <div class="col-6 txt-right">
+                        <span class="icon-bitbucket"></span> Bitbucket
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+    </body>
+</html>

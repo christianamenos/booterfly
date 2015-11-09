@@ -1,0 +1,84 @@
+.wrapper {
+    width: 96%;
+    margin: 0 auto;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 0 $stuffing;
+}
+
+/** Columns container */
+.row {
+    /*
+    margin-left: -$stuffing;
+    margin-right: -$stuffing;
+    */
+    [class*="col-"]:last-child{
+        margin-right:0;
+    }
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@for $i from 1 through $num-cols {
+    .col-#{$i} {
+        width: ( 100 / $num-cols ) * $i * 1%;
+    }
+}
+
+.col-third {
+    width: ( 100 / 3 ) * 1%;
+}
+
+.col-two-thirds {
+    width: ( 100 / 3 ) * 2%;
+}
+
+.col-half {
+    width: ( 100 / 2 ) * 1%;
+}
+
+.col-quarter {
+    width: ( 100 / 4 ) * 1%;
+}
+
+.clear{
+    clear:both;
+}
+
+.full-width{
+    width:100%;
+}
+
+@for $i from 1 to $num-cols {
+    .push-#{$i} {
+        margin-left: ( 100 / $num-cols ) * $i * 1%;
+    }
+}
+
+@media (max-width: 1024px) {
+    [class*="col-"] {
+        padding: 0 $stuffing / 2;
+    }
+
+    .row {
+        /*margin-left: -$stuffing / 2;
+        margin-right: -$stuffing / 2;*/
+    }
+}
+
+@media (max-width: 768px) {
+    
+    [class*="col-"] {
+        width: 100%;
+    }
+    
+    [class*="push-"] {
+        margin-left: 0;
+    }
+}

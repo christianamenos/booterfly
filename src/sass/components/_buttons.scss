@@ -1,0 +1,425 @@
+
+.field-box {
+
+    input[type="submit"], input[type="button"] {
+        @include rounded-border;
+        border:none;
+        position: relative;
+        color:$white-color;
+        text-decoration:none;
+        background-color:$default-color;
+        display: inline-block;
+        padding:$baseline/5 $baseline;
+        text-align: center;
+        font-size:0.75em;
+        cursor:pointer;
+    }
+
+    &.success {
+        input[type="submit"], input[type="button"] {
+            background-color:dark-color($success-color);
+        }
+    }
+
+    &.error, &.danger {
+        input[type="submit"], input[type="button"] {
+            background-color:dark-color($danger-color);
+        }
+    }
+
+    &.info {
+        input[type="submit"], input[type="button"] {
+            background-color:dark-color($info-color);
+        }
+    }
+
+    &.warning {
+        input[type="submit"], input[type="button"] {
+            background-color:dark-color($warning-forms-color);
+        }
+    }
+
+}   
+
+.btn, button
+{
+    @include rounded-border;
+    border:none;
+    position: relative;
+    color:$white-color;
+    text-decoration:none;
+    background-color:$default-color;
+    display: inline-block;
+    padding:$baseline/5 $baseline;
+    text-align: center;
+    font-size:0.75em;
+    font-weight:600;
+    cursor:pointer;
+    
+    &.rounded{
+        border-radius:2em;
+    }
+    
+    a{
+        color:white;
+    }
+
+    &.classic{
+        @include x-platform-prefix(box-shadow, 0 1px 1px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.5) inset);
+        @include linear-gradient(to bottom, $default-color 0%, btn-shadow($default-color) 100%);
+        text-shadow:-1px -1px btn-shadow($default-color);
+
+        &.info{
+            @include linear-gradient(to bottom, $info-color 0%, btn-shadow($info-color) 100%);
+            text-shadow:-1px -1px btn-shadow($info-color);
+        }
+
+        &.success{
+            @include linear-gradient(to bottom, $success-color 0%, btn-shadow($success-color) 100%);
+            text-shadow:-1px -1px btn-shadow($success-color);
+        }
+
+        &.caution{
+            @include linear-gradient(to bottom, $caution-color 0%, btn-shadow($caution-color) 100%);
+            text-shadow:-1px -1px btn-shadow($caution-color);
+        }
+
+        &.warning{
+            @include linear-gradient(to bottom, $warning-color 0%, btn-shadow($warning-color) 100%);
+            text-shadow:-1px -1px btn-shadow($warning-color);
+        }
+        
+        &.danger, &.error{
+            @include linear-gradient(to bottom, $danger-color 0%, btn-shadow($danger-color) 100%);
+            text-shadow:-1px -1px btn-shadow($danger-color);
+        }
+        
+        &:hover{
+            @include linear-gradient(to bottom, btn-hover($default-color) 0%, btn-hover(btn-shadow($default-color)) 100%);
+            text-shadow:-1px -1px btn-hover(btn-shadow($default-color));
+        }
+        
+        &.info:hover{
+            @include linear-gradient(to bottom, btn-hover($info-color) 0%, btn-hover(btn-shadow($info-color)) 100%);
+            text-shadow:-1px -1px btn-hover(btn-shadow($info-color));
+        }
+
+        &.success:hover{
+            @include linear-gradient(to bottom, btn-hover($success-color) 0%, btn-hover(btn-shadow($success-color)) 100%);
+            text-shadow:-1px -1px btn-hover(btn-shadow($success-color));
+        }
+
+        &.caution:hover{
+            @include linear-gradient(to bottom, btn-hover($caution-color) 0%, btn-hover(btn-shadow($caution-color)) 100%);
+            text-shadow:-1px -1px btn-hover(btn-shadow($caution-color));
+        }
+
+        &.warning:hover{
+            @include linear-gradient(to bottom, btn-hover($warning-color) 0%, btn-hover(btn-shadow($warning-color)) 100%);
+            text-shadow:-1px -1px btn-hover(btn-shadow($warning-color));
+        }
+
+        &.danger:hover, &.error:hover{
+            @include linear-gradient(to bottom, btn-hover($danger-color) 0%, btn-hover(btn-shadow($danger-color)) 100%);
+            text-shadow:-1px -1px btn-hover(btn-shadow($danger-color));
+        }
+    }
+
+    &.success {
+        background-color:$success-color;
+    }
+
+    &.error, &.danger {
+        background-color:$danger-color;
+    }
+
+    &.info {
+        background-color:$info-color;
+    }
+
+    &.warning {
+        background-color:$warning-color;
+    }
+
+    &.caution {
+        background-color:$caution-color;
+    }
+
+    &:hover {
+        background-color:btn-hover($default-color);
+    }
+
+    &.success:hover {
+        background-color:btn-hover($success-color);
+    }
+
+    &.error:hover, &.danger:hover {
+        background-color:btn-hover($danger-color);
+    }
+
+    &.info:hover {
+        background-color:btn-hover($info-color);
+    }
+
+    &.warning:hover {
+        background-color:btn-hover($warning-color);
+    }
+
+    &.caution:hover {
+        background-color:btn-hover($caution-color);
+    }
+
+    &:active, &.active{
+        background-color:$default-color;
+        @include x-platform-prefix(box-shadow, inset 0 0 5px 2px btn-shadow($default-color) !important);
+        border-color:btn-shadow($default-color) !important;
+        text-shadow:-1px -1px btn-shadow($default-color);
+    }
+
+    &.success:active, &.success.active {
+        background-color:$success-color;
+        @include x-platform-prefix(box-shadow, inset 0 0 5px 2px btn-shadow($success-color) !important);
+        border-color:btn-shadow($success-color) !important;
+        text-shadow:-1px -1px btn-shadow($success-color) !important;
+    }
+
+    &.error:active, &.danger:active, &.error.active, &.danger.active {
+        background-color:$danger-color;
+        @include x-platform-prefix(box-shadow, inset 0 0 5px 2px btn-shadow($danger-color) !important);
+        border-color:btn-shadow($danger-color) !important;
+        text-shadow:-1px -1px btn-shadow($danger-color) !important;
+    }
+
+    &.info:active, &.info.active {
+        background-color:$info-color;
+        @include x-platform-prefix(box-shadow, inset 0 0 5px 2px btn-shadow($info-color) !important);
+        border-color:btn-shadow($info-color) !important;
+        text-shadow:-1px -1px btn-shadow($info-color) !important;
+    }
+
+    &.warning:active, &.warning.active {
+        background-color:$warning-color;
+        @include x-platform-prefix(box-shadow, inset 0 0 5px 2px btn-shadow($warning-color) !important);
+        border-color:btn-shadow($warning-color) !important;
+        text-shadow:-1px -1px btn-shadow($warning-color) !important;
+    }
+
+    &.caution:active, &.caution.active {
+        background-color:$caution-color;
+        @include x-platform-prefix(box-shadow, inset 0 0 5px 2px btn-shadow($caution-color) !important);
+        border-color:btn-shadow($caution-color) !important;
+        text-shadow:-1px -1px btn-shadow($caution-color) !important;
+    }
+
+    &.small{
+        padding:$baseline/8 $baseline;
+        font-size:0.6em;
+    }
+
+    &.big {
+        font-size:1em;
+        padding:$baseline/3 $baseline;
+    }
+
+    &.inverse{
+        background-color:transparent;
+        border:2px solid $default-color;
+        color:$default-color;
+        font-weight:bold;
+
+        &.success {
+            background-color:transparent;
+            border:2px solid $success-color;
+            color:$success-color;
+        }
+
+        &.error, &.danger {
+            background-color:transparent;
+            border:2px solid $danger-color;
+            color:$danger-color;
+        }
+
+        &.info {
+            background-color:transparent;
+            border:2px solid $info-color;
+            color:$info-color;
+        }
+
+        &.warning {
+            background-color:transparent;
+            border:2px solid $warning-color;
+            color:$warning-color;
+        }
+
+        &.caution {
+            background-color:transparent;
+            border:2px solid $caution-color;
+            color:$caution-color;
+        }
+
+        &:hover{
+            background-color:$default-color;
+            color:$white-color !important;
+        }
+
+        &.success:hover {
+            background-color:$success-color;
+        }
+
+        &.error:hover, &.danger:hover {
+            background-color:$danger-color;
+        }
+
+        &.info:hover {
+            background-color:$info-color;
+        }
+
+        &.warning:hover {
+            background-color:$warning-color;
+        }
+
+        &.caution:hover {
+            background-color:$caution-color;
+        }
+    }
+}
+
+a.fancy-btn, a.btn,a.fancy-btn:hover, a.btn:hover, a.fancy-btn:focus, a.btn:focus, a.fancy-btn:active, a.btn:active{
+    color:$white-color;
+}
+
+.fancy-btn{
+    @include rounded-border;
+    @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($default-color));
+    position: relative;
+    color:$white-color;
+    text-decoration: none;
+    background-color:$default-color;
+    display: inline-block;
+    padding:$baseline/5 $baseline;
+    text-align: center;
+    font-size:0.75em;
+    font-weight:600;
+    cursor:pointer;
+
+    &.success {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($success-color));
+        background-color:$success-color;
+    }
+
+    &.error, &.danger {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($danger-color));
+        background-color:$danger-color;
+    }
+
+    &.info {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($info-color));
+        background-color:$info-color;
+    }
+
+    &.warning {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($warning-color));
+        background-color:$warning-color;
+    }
+
+    &.caution {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($caution-color));
+        background-color:$caution-color;
+    }
+
+    &:hover {
+        background-color:btn-hover($default-color);
+    }
+
+    &.success:hover {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($success-color));
+        background-color:btn-hover($success-color);
+    }
+
+    &.error:hover, &.danger:hover {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($danger-color));
+        background-color:btn-hover($danger-color);
+    }
+
+    &.info:hover {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($info-color));
+        background-color:btn-hover($info-color);
+    }
+
+    &.warning:hover {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($warning-color));
+        background-color:btn-hover($warning-color);
+    }
+
+    &.caution:hover {
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($caution-color));
+        background-color:btn-hover($caution-color);
+    }
+
+    &:active, &.active {
+        background-color:btn-active($default-color) !important;
+        top:3px !important;
+        @include x-platform-prefix(box-shadow, 0px 0px 0px transparent !important);
+    }
+
+    &.success:active, &.active.success {
+        background-color:btn-active($success-color) !important;
+    }
+
+    &.error:active, &.active.error, &.danger:active, &.active.danger {
+        background-color:btn-active($danger-color) !important;
+    }
+
+    &.info:active, &.active.info {
+        background-color:btn-active($info-color) !important;
+    }
+
+    &.warning:active, &.active.warning {
+        background-color:btn-active($warning-color) !important;
+    }
+
+    &.caution:active, &.active.caution {
+        background-color:btn-active($caution-color) !important;
+    }
+
+    &.small{
+        padding:$baseline/10 $baseline;
+        font-size:0.6em;
+    }
+
+    &.big{
+        font-size:1em;
+        padding:$baseline/3 $baseline;
+    }
+
+    &:disabled, &.disabled{
+        background-color:btn-active($default-color) !important;
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($default-color) !important);
+    }
+
+    &.success:disabled, &.disabled.success {
+        background-color:btn-active($success-color) !important;
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($success-color) !important);
+    }
+
+    &.error:disabled, &.disabled.error, &.danger:disabled, &.disabled.danger {
+        background-color:btn-active($danger-color) !important;
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($danger-color) !important);
+    }
+
+    &.info:disabled, &.disabled.info {
+        background-color:btn-active($info-color) !important;
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($info-color) !important);
+    }
+
+    &.warning:disabled, &.disabled.warning {
+        background-color:btn-active($warning-color) !important;
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($warning-color) !important);
+    }
+
+    &.caution:disabled, &.disabled.caution {
+        background-color:btn-active($caution-color) !important;
+        @include x-platform-prefix(box-shadow, 0px 3px 0px btn-shadow($caution-color) !important);
+    }
+
+}

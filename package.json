@@ -1,0 +1,37 @@
+{
+  "name": "Booterfly",
+  "version": "0.1.0",
+  "description": "CSS3 framework",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://christian_amenos@bitbucket.org/enjoydreamers-team/booterfly.git"
+  },
+  "keywords": [
+    "framework",
+    "css3",
+    "sass",
+    "compass",
+    "fontawesome",
+    "gulp",
+    "bower"
+  ],
+  "author": "Enjoy Dreamers",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.11",
+    "gulp-compass": "^2.0.4",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.9.4",
+    "gulp-livereload": "^3.8.0",
+    "gulp-load-plugins": "^0.9.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-strip-debug": "^1.0.2",
+    "gulp-uglify": "^1.1.0"
+  }
+}

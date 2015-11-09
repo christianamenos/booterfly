@@ -1,0 +1,138 @@
+nav{
+    background-color:$black-bg-color;
+    color:$default-color;
+    
+    ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+    }
+    
+    li{
+        padding:0.5em 1em;
+        
+        a, a:visited{
+            color:$white-color;
+            
+            &:hover{
+                color:$white-color;
+            }
+        }
+        
+        &:hover{
+            background-color:$success-color;
+        }
+    }
+}
+
+/*
+.navbar{
+    border-bottom:1px solid $black-bg-color;
+    padding:0 $baseline/2;
+    height:$baseline*1.6;
+    line-height:$baseline*1.6;
+    width:100%;
+    color:$black-bg-color;
+    font-size:1.2em;
+
+
+    a{
+        font-weight:lighter;
+        color:$black-bg-color;
+
+        &:hover{
+            color:active($black-bg-color);
+        }
+    }
+
+    &.black{
+        border-bottom:none;
+        background-color:$black-bg-transparent;
+        color:$white-color;
+
+        a{
+            color:$white-color;
+
+            &:hover{
+                color:hover($white-color);
+            }
+        }
+    }
+
+    &.white{
+        border-bottom:none;
+        background-color:$white-bg-transparent;
+        color:$black-bg-color;
+
+        a{
+            color:$black-bg-color;
+
+            &:hover{
+                color:active($black-bg-color);
+            }
+        }
+    }
+
+
+
+    .logo{
+        margin-right:$baseline;
+
+        small{
+            font-size:0.6em;
+        }
+
+        img{
+            display:inline-block;
+            height:$baseline*1.6;
+            vertical-align:middle;
+        }
+    }
+
+    &.top-fixed{
+        position:absolute;
+        top:0;
+        left:0;
+    }
+
+    ul{
+        list-style:none;
+        display:inline-block;
+        margin:0;
+
+        li{
+            position:relative;
+            display:inline-block;
+            margin-right:$baseline/2;
+
+            ul{
+                position:absolute;
+                display:none;
+                z-index:3;
+                li{
+                    color:$black-bg-color;
+                    width:10em;
+                    padding:$baseline/2;
+                    line-height:1;
+                    display: block;
+                    background-color:$white-bg-transparent;
+                    
+                    &:hover{
+                        border-bottom:0;
+                        border-left:2px solid $menu-active-border;
+                    }
+                }
+            }
+
+            &:hover{
+                border-bottom:2px solid $menu-active-border;
+                transition: all 0.1s ease-in-out 0s;
+
+                ul{
+                    display:block;
+                }
+            }
+        }
+    }
+}
+*/
