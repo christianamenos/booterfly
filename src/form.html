@@ -11,6 +11,12 @@
         <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     </head>
     <body>
+        <header>
+            <span class="icon-reorder float-left"></span>
+            <h1>Booterfly <small>CSS Framework</small></h1>
+            <!--img class="logo profile circle" src="https://pbs.twimg.com/profile_images/518533207180865538/MmX-h8o7_400x400.jpeg"/-->
+            <!--span class="icon-cog float-right"></span-->
+        </header>
         <!--img src="https://dl.dropboxusercontent.com/u/3364213/img.jpg" class="blur col-4" title="Test tooltip"/-->
         <div class="wrapper">
             <nav>
@@ -22,14 +28,14 @@
                 </ul>
             </nav>
 
-            
+
 
             <h1>Buttons</h1>
             <p>Booterfly gives a collection of different kind of buttons with it's states (hover and active) in order to be adaptative enought for most of the possible web projects.</p>
 
             <h3>Flat buttons</h3>
             Lorem ipsum dolor sit amet <span class="btn small">Small button</span> <span class="btn">Default button</span> <span class="btn inverse">Default inverse button</span> <span class="btn big">Button big</span>
-            
+
             <h3>Rounded buttons</h3>
             <span class="btn rounded">This is a rounded button</span>
 
@@ -40,7 +46,7 @@
             <span class="btn classic caution">Caution</span>
             <span class="btn classic warning">Warning</span>
             <span class="btn classic danger">Danger</span>
-            
+
             <h3>Fancy buttons</h3>
             Lorem ipsum dolor sit amet <span class="fancy-btn small">Small button</span> <span class="fancy-btn">Default button</span> <span class="fancy-btn big">Button big</span>
 
@@ -124,169 +130,181 @@
             <span class="fancy-btn small warning">Warning button</span>
             <span class="fancy-btn small error">Error button</span>
 
+            <h3>Icons inside buttons</h3>
+            <span class="btn big"><span class="icon-send"></span>Send</span>
+            <span class="btn"><span class="icon-send"></span>Send</span>
+            <span class="btn small"><span class="icon-send"></span>Send</span>
+
             <h1>Forms</h1>
             <p>In this section it is documented the buttons and form elements used by the user to interact with the system.</p>
-            <div class="row">
-                <div class="col-4">
-                    <h2>Default</h2>
-                    <section>
+            <h2>Default</h2>
+            <section>
 
-                        <form action="submit">
+                <form action="submit">
 
-                            <fieldset>
+                    <fieldset>
 
-                                <legend>Form Legend</legend>
+                        <legend>Form Legend</legend>
 
-                                <div class="field-box">
-                                    <label for="name">Name</label>
-                                    <input id="name" type="text" placeholder="Name">
-                                    <div class="field-info">Fill your name</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" placeholder="Name">
+                            <div class="field-info">Fill your name</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="name">Name</label>
-                                    <div class="flat"><input id="name" type="text" placeholder="Name"></div>
-                                    <div class="field-info">Fill your name</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="name">Name</label>
+                            <div class="flat"><input id="name" type="text" placeholder="Name"></div>
+                            <div class="field-info">Fill your name</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="name1">Name</label>
-                                    <input disabled="disabled" id="name1" type="text" placeholder="Name">
-                                    <div class="field-info">Fill your name</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="name1">Name</label>
+                            <input disabled="disabled" id="name1" type="text" placeholder="Name">
+                            <div class="field-info">Fill your name</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="color">Color</label>
-                                    <input id="color" type="color">
-                                    <div class="field-info">Choose a color</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="color">Color</label>
+                            <input id="color" type="color">
+                            <div class="field-info">Choose a color</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="date">Date</label>
-                                    <input id="date" type="date">
-                                    <div class="field-info">Write a date</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="date">Date</label>
+                            <input id="date" type="date">
+                            <div class="field-info">Write a date</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="datetime">Datetime</label>
-                                    <input id="datetime" type="datetime">
-                                    <div class="field-info">Write a datetime</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="datetime">Datetime</label>
+                            <input id="datetime" type="datetime">
+                            <div class="field-info">Write a datetime</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="datetime-local">Datetime local</label>
-                                    <input id="datetime-local" type="datetime-local">
-                                    <div class="field-info">Write a DateTime Local</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="datetime-local">Datetime local</label>
+                            <input id="datetime-local" type="datetime-local">
+                            <div class="field-info">Write a DateTime Local</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="email">email</label>
-                                    <input id="email" type="email" placeholder="mail@mail.com">
-                                    <div class="field-info">Write your email</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="email">email</label>
+                            <input id="email" type="email" placeholder="mail@mail.com">
+                            <div class="field-info">Write your email</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="month">month</label>
-                                    <input id="month" type="month">
-                                    <div class="field-info">Choose a month</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="month">month</label>
+                            <input id="month" type="month">
+                            <div class="field-info">Choose a month</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="number">number</label>
-                                    <input id="number" type="number" placeholder="42">
-                                    <div class="field-info">Choose a number</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="number">number</label>
+                            <input id="number" type="number" placeholder="42">
+                            <div class="field-info">Choose a number</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="range">range</label>
-                                    <input id="range" type="range" min="3" max="10">
-                                    <div class="field-info">Choose a range</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="range">range</label>
+                            <input id="range" type="range" min="3" max="10">
+                            <div class="field-info">Choose a range</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="search">month</label>
-                                    <input id="search" type="search" placeholder="Search">
-                                    <div class="field-info">Choose a month</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="search">month</label>
+                            <input id="search" type="search" placeholder="Search">
+                            <div class="field-info">Choose a month</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="tel">tel</label>
-                                    <input id="tel" type="tel" placeholder="tel">
-                                    <div class="field-info">Write a tel</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="tel">tel</label>
+                            <input id="tel" type="tel" placeholder="tel">
+                            <div class="field-info">Write a tel</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="time">time</label>
-                                    <input id="time" type="time">
-                                    <div class="field-info">Choose a time</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="time">time</label>
+                            <input id="time" type="time">
+                            <div class="field-info">Choose a time</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="url">url</label>
-                                    <input id="url" type="url" placeholder="url">
-                                    <div class="field-info">Write a url</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="url">url</label>
+                            <input id="url" type="url" placeholder="url">
+                            <div class="field-info">Write a url</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="week">week</label>
-                                    <input id="week" type="week">
-                                    <div class="field-info">Write a week</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="week">week</label>
+                            <input id="week" type="week">
+                            <div class="field-info">Write a week</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="textarea">Textarea</label>
-                                    <textarea id="textarea" placeholder="Text"></textarea>
-                                    <div class="field-info">Write in the textarea</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="textarea">Textarea</label>
+                            <textarea id="textarea" placeholder="Text"></textarea>
+                            <div class="field-info">Write in the textarea</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="select">select option</label>
-                                    <select id="select">
-                                        <option value="1">option one</option>
-                                        <option value="2">option two</option>
-                                        <option value="3">option three</option>
-                                    </select>
-                                    <div class="field-info">select</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="select">select option</label>
+                            <select id="select">
+                                <option value="1">option one</option>
+                                <option value="2">option two</option>
+                                <option value="3">option three</option>
+                            </select>
+                            <div class="field-info">select</div>
+                        </div>
 
-                                <div class="field-box">
-                                    <label for="radio">radio</label>
-                                    <input type="radio" name="sex" value="male"><span class="radio-option">Male</span>
-                                    <input type="radio" name="sex" value="female"><span class="radio-option">Female</span>
-                                    <div class="field-info">radio</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="radio">radio</label>
+                            <input id="male" checked="checked" type="radio" name="gender" value="male" class="custom">
+                            <label for="male">Male</label>
+                            <span class="radio-option">Male</span>
+                            <input id="female" type="radio" name="gender" value="female" class="custom">
+                            <label for="female">Female</label>
+                            <span class="radio-option">Female</span>
+                            <div class="field-info">radio</div>
+                        </div>
 
 
-                                <div class="field-box">
-                                    <label for="checkbox">checkbox</label>
-                                    <input type="checkbox" name="checkbox" value="0"><span class="value-option">Apple</span>
-                                    <input type="checkbox" name="checkbox" value="1"><span class="value-option">Pinaple</span>
-                                    <input type="checkbox" name="checkbox" value="2"><span class="value-option">Melon</span>
-                                    <div class="field-info">checkbox</div>
-                                </div>
+                        <div class="field-box">
+                            <label for="checkbox">checkbox</label>
+                            <input class="custom" checked="checked" type="checkbox" name="checkbox" value="0" id="apple-checkbox">
+                            <label for="apple-checkbox">Apple</label>
+                            <span class="value-option">Apple</span>
 
-                                <div class="field-box">
-                                    <label for="submit">submit</label>
-                                    <input id="submit" type="submit" value="sent">
-                                    <div class="field-info">submit</div>
-                                </div>
+                            <input class="custom" type="checkbox" name="checkbox" value="1" id="pinaple-checkbox">
+                            <label for="pinaple-checkbox">Pinaple</label>
+                            <span class="value-option">Pinaple</span>
 
-                            </fieldset>
-                        </form>
-                    </section>
-                </div>
-            </div>
+                            <input class="custom" type="checkbox" name="checkbox" value="2" id="melon-checkbox">
+                            <label for="melon-checkbox">Melon</label>
+                            <span class="value-option">Melon</span>
+
+                            <div class="field-info">checkbox</div>
+                        </div>
+
+                        <div class="field-box">
+                            <label for="submit">submit</label>
+                            <input id="submit" type="submit" value="Send">
+                            <div class="field-info">submit</div>
+                        </div>
+
+                        <div class="field-box">
+                            <label for="submit-btn">Submit button</label>
+                            <button id="submit-btn" type="submit"><span class="icon-floppy-o"></span>Submit</button>
+                            <div class="field-info">Submit button</div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </section>
 
             <footer class="footer">
-                <div class="row">
-                    <div class="col-6">
-                        Booterfly is a project by Enjoy Dreamers - <a href="http://enjoydreamers.com">http://enjoydreamers.com</a>
-                    </div>
-
-                    <div class="col-6 txt-right">
-                        <span class="icon-bitbucket"></span> Bitbucket
-                    </div>
-                </div>
+                <span class="icon-github"></span> <a href="https://github.com/AmenoPh1x/booterfly">Star it at github</a>
             </footer>
         </div>
     </body>

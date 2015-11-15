@@ -41,7 +41,7 @@ h4, .h4{
 
 h5, .h5{
     font-size:$h5-size;
-    font-weight:500;
+    /*font-weight:500;*/
 }
 
 h6, .h6{
@@ -59,6 +59,10 @@ ul{
     list-style:disc outside;
 }
 
+li{
+    margin-bottom:0.2em;
+}
+
 ol{
     list-style:decimal outside;
 }
@@ -71,7 +75,7 @@ dl{
     margin-left:$baseline;
 }
 
-.unstyled{
+ul.unstyled{
     list-style:none;
 }
 
@@ -177,7 +181,7 @@ blockquote{
     position:relative;
     quotes:"“" "”" "‘" "’";
     font-style:italic;
-    margin-left:$baseline;
+    margin:0;
     background-color:$default-bg-color;
     padding:$baseline/2 $baseline*2;
     border-left:$alert-border-size solid $default-color;
@@ -267,7 +271,6 @@ code, sampl{
 
 var{
     color:indianred;
-    @extend small;
 }
 
 table{

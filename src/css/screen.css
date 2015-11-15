@@ -204,8 +204,8 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 1.1em;
+  /*font-weight:500;*/
 }
 
 h6, .h6 {
@@ -223,6 +223,10 @@ ul {
   list-style: disc outside;
 }
 
+li {
+  margin-bottom: 0.2em;
+}
+
 ol {
   list-style: decimal outside;
 }
@@ -231,7 +235,7 @@ dl {
   margin-left: 1.5em;
 }
 
-.unstyled {
+ul.unstyled {
   list-style: none;
 }
 
@@ -256,7 +260,7 @@ em, .italic {
   font-size: 0.5em !important;
 }
 
-small, blockquote footer, kbd, code, sampl, var, .small {
+small, blockquote footer, kbd, code, sampl, .small {
   font-size: 0.75em !important;
   font-weight: 200;
 }
@@ -335,7 +339,7 @@ blockquote {
   position: relative;
   quotes: "“" "”" "‘" "’";
   font-style: italic;
-  margin-left: 1.5em;
+  margin: 0;
   background-color: #f5f5f5;
   padding: 0.75em 3em;
   border-left: 5px solid #aaa;
@@ -817,7 +821,7 @@ textarea {
   box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.6) inset;
   border: 1px solid #aaa;
   border: none;
-  border-bottom: 1px solid #999;
+  /*border-bottom:1px solid #999;*/
   padding: 0.5em 0.6em;
   font-size: 0.9em;
 }
@@ -852,6 +856,10 @@ input[type="week"].big,
 select.big,
 textarea.big {
   font-size: 1.3em;
+}
+
+textarea {
+  width: 100%;
 }
 
 .field-box.required label:after, .field-box label.required:after {
@@ -895,12 +903,55 @@ textarea.big {
 .field-box input[type="week"]:focus,
 .field-box textarea:focus {
   box-shadow: 0px 0px 5px 0 #aaa;
+  border: 1px solid #aaa;
 }
-.field-box .value-option {
-  margin-left: 0.3em;
+.field-box input.custom {
+  display: none;
 }
-.field-box .radio-option {
-  margin-left: 0.3em;
+.field-box input[type="radio"].custom + label {
+  display: inline-block;
+  color: transparent;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #aaa;
+  position: relative;
+  background-color: transparent;
+  top: 8px;
+}
+.field-box input[type="radio"].custom:checked + label:after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #aaa;
+  top: 2px;
+  left: 2px;
+  display: inline-block;
+  content: "";
+  border-radius: 50%;
+}
+.field-box input[type="checkbox"].custom + label {
+  display: inline-block;
+  color: transparent;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 2px solid #aaa;
+  position: relative;
+  background-color: transparent;
+  top: 8px;
+}
+.field-box input[type="checkbox"].custom:checked + label:after {
+  content: '\2713';
+  color: #aaa;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 7px;
+  left: 0;
+  display: inline-block;
 }
 .field-box.success label {
   color: #693;
@@ -1070,9 +1121,9 @@ input[type="color"] {
   text-decoration: none;
   background-color: #aaa;
   display: inline-block;
-  padding: 0.3em 1.5em;
+  padding: 0.375em 1.5em;
   text-align: center;
-  font-size: 0.75em;
+  font-size: 1em;
   cursor: pointer;
 }
 .field-box.success input[type="submit"], .field-box.success input[type="button"] {
@@ -1088,7 +1139,12 @@ input[type="color"] {
   background-color: #f37e00;
 }
 
-.btn, button {
+*:disabled, .disabled {
+  cursor: not-allowed;
+}
+
+.btn, button, input[type="submit"] {
+  margin: 2px 0;
   border-radius: 2px;
   border: none;
   position: relative;
@@ -1096,216 +1152,221 @@ input[type="color"] {
   text-decoration: none;
   background-color: #aaa;
   display: inline-block;
-  padding: 0.3em 1.5em;
+  padding: 0.375em 1.5em;
   text-align: center;
-  font-size: 0.75em;
+  font-size: 1em;
   font-weight: 600;
   cursor: pointer;
 }
-.btn.rounded, button.rounded {
+.btn [class*="icon-"], button [class*="icon-"], input[type="submit"] [class*="icon-"] {
+  padding-left: 0;
+  position: relative;
+  left: -0.5em;
+}
+.btn.rounded, button.rounded, input[type="submit"].rounded {
   border-radius: 2em;
 }
-.btn a, button a, a.btn, a button {
+.btn a, button a, input[type="submit"] a {
   color: white;
 }
-.btn.classic, button.classic {
+.btn.classic, button.classic, input[type="submit"].classic {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   background: #aaa;
   background: -webkit-linear-gradient(top, #aaa 0%, #909090 100%);
   background: linear-gradient(to bottom, #aaa 0%, #909090 100%);
   text-shadow: -1px -1px #909090;
 }
-.btn.classic.info, button.classic.info {
+.btn.classic.info, button.classic.info, input[type="submit"].classic.info {
   background: #00a9db;
   background: -webkit-linear-gradient(top, #00a9db 0%, #0082a8 100%);
   background: linear-gradient(to bottom, #00a9db 0%, #0082a8 100%);
   text-shadow: -1px -1px #0082a8;
 }
-.btn.classic.success, button.classic.success {
+.btn.classic.success, button.classic.success, input[type="submit"].classic.success {
   background: #693;
   background: -webkit-linear-gradient(top, #693 0%, #4d7326 100%);
   background: linear-gradient(to bottom, #693 0%, #4d7326 100%);
   text-shadow: -1px -1px #4d7326;
 }
-.btn.classic.caution, button.classic.caution {
+.btn.classic.caution, button.classic.caution, input[type="submit"].classic.caution {
   background: #fb3;
   background: -webkit-linear-gradient(top, #fb3 0%, #ffaa00 100%);
   background: linear-gradient(to bottom, #fb3 0%, #ffaa00 100%);
   text-shadow: -1px -1px #ffaa00;
 }
-.btn.classic.warning, button.classic.warning {
+.btn.classic.warning, button.classic.warning, input[type="submit"].classic.warning {
   background: #f80;
   background: -webkit-linear-gradient(top, #f80 0%, #cc6d00 100%);
   background: linear-gradient(to bottom, #f80 0%, #cc6d00 100%);
   text-shadow: -1px -1px #cc6d00;
 }
-.btn.classic.danger, .btn.classic.error, button.classic.danger, button.classic.error {
+.btn.classic.danger, .btn.classic.error, button.classic.danger, button.classic.error, input[type="submit"].classic.danger, input[type="submit"].classic.error {
   background: #c30;
   background: -webkit-linear-gradient(top, #c30 0%, #992600 100%);
   background: linear-gradient(to bottom, #c30 0%, #992600 100%);
   text-shadow: -1px -1px #992600;
 }
-.btn.classic:hover, button.classic:hover {
+.btn.classic:hover, button.classic:hover, input[type="submit"].classic:hover {
   background: #9b9b9b;
   background: -webkit-linear-gradient(top, #9b9b9b 0%, #818181 100%);
   background: linear-gradient(to bottom, #9b9b9b 0%, #818181 100%);
   text-shadow: -1px -1px #818181;
 }
-.btn.classic.info:hover, button.classic.info:hover {
+.btn.classic.info:hover, button.classic.info:hover, input[type="submit"].classic.info:hover {
   background: #0091bc;
   background: -webkit-linear-gradient(top, #0091bc 0%, #006a89 100%);
   background: linear-gradient(to bottom, #0091bc 0%, #006a89 100%);
   text-shadow: -1px -1px #006a89;
 }
-.btn.classic.success:hover, button.classic.success:hover {
+.btn.classic.success:hover, button.classic.success:hover, input[type="submit"].classic.success:hover {
   background: #57822b;
   background: -webkit-linear-gradient(top, #57822b 0%, #3d5c1f 100%);
   background: linear-gradient(to bottom, #57822b 0%, #3d5c1f 100%);
   text-shadow: -1px -1px #3d5c1f;
 }
-.btn.classic.caution:hover, button.classic.caution:hover {
+.btn.classic.caution:hover, button.classic.caution:hover, input[type="submit"].classic.caution:hover {
   background: #ffb114;
   background: -webkit-linear-gradient(top, #ffb114 0%, #e09600 100%);
   background: linear-gradient(to bottom, #ffb114 0%, #e09600 100%);
   text-shadow: -1px -1px #e09600;
 }
-.btn.classic.warning:hover, button.classic.warning:hover {
+.btn.classic.warning:hover, button.classic.warning:hover, input[type="submit"].classic.warning:hover {
   background: #e07800;
   background: -webkit-linear-gradient(top, #e07800 0%, #ad5c00 100%);
   background: linear-gradient(to bottom, #e07800 0%, #ad5c00 100%);
   text-shadow: -1px -1px #ad5c00;
 }
-.btn.classic.danger:hover, .btn.classic.error:hover, button.classic.danger:hover, button.classic.error:hover {
+.btn.classic.danger:hover, .btn.classic.error:hover, button.classic.danger:hover, button.classic.error:hover, input[type="submit"].classic.danger:hover, input[type="submit"].classic.error:hover {
   background: #ad2b00;
   background: -webkit-linear-gradient(top, #ad2b00 0%, #7a1f00 100%);
   background: linear-gradient(to bottom, #ad2b00 0%, #7a1f00 100%);
   text-shadow: -1px -1px #7a1f00;
 }
-.btn.success, button.success {
+.btn.success, button.success, input[type="submit"].success {
   background-color: #693;
 }
-.btn.error, .btn.danger, button.error, button.danger {
+.btn.error, .btn.danger, button.error, button.danger, input[type="submit"].error, input[type="submit"].danger {
   background-color: #c30;
 }
-.btn.info, button.info {
+.btn.info, button.info, input[type="submit"].info {
   background-color: #00a9db;
 }
-.btn.warning, button.warning {
+.btn.warning, button.warning, input[type="submit"].warning {
   background-color: #f80;
 }
-.btn.caution, button.caution {
+.btn.caution, button.caution, input[type="submit"].caution {
   background-color: #fb3;
 }
-.btn:hover, button:hover {
+.btn:hover, button:hover, input[type="submit"]:hover {
   background-color: #9b9b9b;
 }
-.btn.success:hover, button.success:hover {
+.btn.success:hover, button.success:hover, input[type="submit"].success:hover {
   background-color: #57822b;
 }
-.btn.error:hover, .btn.danger:hover, button.error:hover, button.danger:hover {
+.btn.error:hover, .btn.danger:hover, button.error:hover, button.danger:hover, input[type="submit"].error:hover, input[type="submit"].danger:hover {
   background-color: #ad2b00;
 }
-.btn.info:hover, button.info:hover {
+.btn.info:hover, button.info:hover, input[type="submit"].info:hover {
   background-color: #0091bc;
 }
-.btn.warning:hover, button.warning:hover {
+.btn.warning:hover, button.warning:hover, input[type="submit"].warning:hover {
   background-color: #e07800;
 }
-.btn.caution:hover, button.caution:hover {
+.btn.caution:hover, button.caution:hover, input[type="submit"].caution:hover {
   background-color: #ffb114;
 }
-.btn:active, .btn.active, button:active, button.active {
+.btn:active, .btn.active, button:active, button.active, input[type="submit"]:active, input[type="submit"].active {
   background-color: #aaa;
   box-shadow: inset 0 0 5px 2px #909090 !important;
   border-color: #909090 !important;
   text-shadow: -1px -1px #909090;
 }
-.btn.success:active, .btn.success.active, button.success:active, button.success.active {
+.btn.success:active, .btn.success.active, button.success:active, button.success.active, input[type="submit"].success:active, input[type="submit"].success.active {
   background-color: #693;
   box-shadow: inset 0 0 5px 2px #4d7326 !important;
   border-color: #4d7326 !important;
   text-shadow: -1px -1px #4d7326 !important;
 }
-.btn.error:active, .btn.danger:active, .btn.error.active, .btn.danger.active, button.error:active, button.danger:active, button.error.active, button.danger.active {
+.btn.error:active, .btn.danger:active, .btn.error.active, .btn.danger.active, button.error:active, button.danger:active, button.error.active, button.danger.active, input[type="submit"].error:active, input[type="submit"].danger:active, input[type="submit"].error.active, input[type="submit"].danger.active {
   background-color: #c30;
   box-shadow: inset 0 0 5px 2px #992600 !important;
   border-color: #992600 !important;
   text-shadow: -1px -1px #992600 !important;
 }
-.btn.info:active, .btn.info.active, button.info:active, button.info.active {
+.btn.info:active, .btn.info.active, button.info:active, button.info.active, input[type="submit"].info:active, input[type="submit"].info.active {
   background-color: #00a9db;
   box-shadow: inset 0 0 5px 2px #0082a8 !important;
   border-color: #0082a8 !important;
   text-shadow: -1px -1px #0082a8 !important;
 }
-.btn.warning:active, .btn.warning.active, button.warning:active, button.warning.active {
+.btn.warning:active, .btn.warning.active, button.warning:active, button.warning.active, input[type="submit"].warning:active, input[type="submit"].warning.active {
   background-color: #f80;
   box-shadow: inset 0 0 5px 2px #cc6d00 !important;
   border-color: #cc6d00 !important;
   text-shadow: -1px -1px #cc6d00 !important;
 }
-.btn.caution:active, .btn.caution.active, button.caution:active, button.caution.active {
+.btn.caution:active, .btn.caution.active, button.caution:active, button.caution.active, input[type="submit"].caution:active, input[type="submit"].caution.active {
   background-color: #fb3;
   box-shadow: inset 0 0 5px 2px #ffaa00 !important;
   border-color: #ffaa00 !important;
   text-shadow: -1px -1px #ffaa00 !important;
 }
-.btn.small, button.small {
+.btn.small, button.small, input[type="submit"].small {
   padding: 0.1875em 1.5em;
   font-size: 0.6em;
 }
-.btn.big, button.big {
+.btn.big, button.big, input[type="submit"].big {
   font-size: 1em;
   padding: 0.5em 1.5em;
 }
-.btn.inverse, button.inverse {
+.btn.inverse, button.inverse, input[type="submit"].inverse {
   background-color: transparent;
   border: 2px solid #aaa;
   color: #aaa;
   font-weight: bold;
 }
-.btn.inverse.success, button.inverse.success {
+.btn.inverse.success, button.inverse.success, input[type="submit"].inverse.success {
   background-color: transparent;
   border: 2px solid #693;
   color: #693;
 }
-.btn.inverse.error, .btn.inverse.danger, button.inverse.error, button.inverse.danger {
+.btn.inverse.error, .btn.inverse.danger, button.inverse.error, button.inverse.danger, input[type="submit"].inverse.error, input[type="submit"].inverse.danger {
   background-color: transparent;
   border: 2px solid #c30;
   color: #c30;
 }
-.btn.inverse.info, button.inverse.info {
+.btn.inverse.info, button.inverse.info, input[type="submit"].inverse.info {
   background-color: transparent;
   border: 2px solid #00a9db;
   color: #00a9db;
 }
-.btn.inverse.warning, button.inverse.warning {
+.btn.inverse.warning, button.inverse.warning, input[type="submit"].inverse.warning {
   background-color: transparent;
   border: 2px solid #f80;
   color: #f80;
 }
-.btn.inverse.caution, button.inverse.caution {
+.btn.inverse.caution, button.inverse.caution, input[type="submit"].inverse.caution {
   background-color: transparent;
   border: 2px solid #fb3;
   color: #fb3;
 }
-.btn.inverse:hover, button.inverse:hover {
+.btn.inverse:hover, button.inverse:hover, input[type="submit"].inverse:hover {
   background-color: #aaa;
   color: #fff !important;
 }
-.btn.inverse.success:hover, button.inverse.success:hover {
+.btn.inverse.success:hover, button.inverse.success:hover, input[type="submit"].inverse.success:hover {
   background-color: #693;
 }
-.btn.inverse.error:hover, .btn.inverse.danger:hover, button.inverse.error:hover, button.inverse.danger:hover {
+.btn.inverse.error:hover, .btn.inverse.danger:hover, button.inverse.error:hover, button.inverse.danger:hover, input[type="submit"].inverse.error:hover, input[type="submit"].inverse.danger:hover {
   background-color: #c30;
 }
-.btn.inverse.info:hover, button.inverse.info:hover {
+.btn.inverse.info:hover, button.inverse.info:hover, input[type="submit"].inverse.info:hover {
   background-color: #00a9db;
 }
-.btn.inverse.warning:hover, button.inverse.warning:hover {
+.btn.inverse.warning:hover, button.inverse.warning:hover, input[type="submit"].inverse.warning:hover {
   background-color: #f80;
 }
-.btn.inverse.caution:hover, button.inverse.caution:hover {
+.btn.inverse.caution:hover, button.inverse.caution:hover, input[type="submit"].inverse.caution:hover {
   background-color: #fb3;
 }
 
@@ -1326,6 +1387,7 @@ a.fancy-btn, a.btn, a.fancy-btn:hover, a.btn:hover, a.fancy-btn:focus, a.btn:foc
   font-size: 0.75em;
   font-weight: 600;
   cursor: pointer;
+  margin: 3px 0;
 }
 .fancy-btn.success {
   box-shadow: 0px 3px 0px #4d7326;
@@ -3894,28 +3956,90 @@ a.fancy-btn, a.btn, a.fancy-btn:hover, a.btn:hover, a.fancy-btn:focus, a.btn:foc
   margin-top: -1em;
 }
 
-nav {
-  background-color: #333;
-  color: #aaa;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-nav li {
-  padding: 0.5em 1em;
-}
-nav li a, nav li a:visited {
-  color: #fff;
-}
-nav li a:hover, nav li a:visited:hover {
-  color: #fff;
-}
-nav li:hover {
-  background-color: #693;
+header + * {
+  margin-top: 5em !important;
 }
 
+header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #eee;
+  padding: 0.5em 1em;
+  border-radius: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+}
+header h1, header h2, header h3, header h4, header h5 {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+}
+header .logo {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+}
+header .logo.profile {
+  position: absolute;
+  border: 3px solid #39c;
+  bottom: -40px;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  margin-left: -40px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.5em;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 0.3em 0.1em;
+  }
+
+  header + * {
+    margin-top: 4em !important;
+  }
+}
+nav {
+  display: none;
+}
+
+/*
+
+nav{
+    background-color:$black-bg-color;
+    color:$default-color;
+    
+    ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+    }
+    
+    li{
+        padding:0.5em 1em;
+        
+        a, a:visited{
+            color:$white-color;
+            
+            &:hover{
+                color:$white-color;
+            }
+        }
+        
+        &:hover{
+            background-color:$success-color;
+        }
+    }
+}
+*/
 /*
 .navbar{
     border-bottom:1px solid $black-bg-color;
@@ -4093,6 +4217,8 @@ pre.prettyprint {
   line-height: 1.5;
   border: 1px solid #ccc;
   padding: 10px;
+  overflow: scroll;
+  border-radius: 3px;
 }
 
 .prettyprint {
