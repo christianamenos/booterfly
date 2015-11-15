@@ -7,8 +7,9 @@
         <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport">
         <link type="image/x-icon" href="../img/favicon.ico" rel="shortcut icon">
         <link type="text/css" rel="stylesheet" href="css/screen.css">
-
+        <script src="vendors/jquery/dist/jquery.min.js"></script>
         <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <script src="js/booterfly.min.js"></script>
     </head>
     <body>
         <header>
@@ -16,17 +17,22 @@
             <h1>Booterfly <small>CSS Framework</small></h1>
             <!--img class="logo profile circle" src="https://pbs.twimg.com/profile_images/518533207180865538/MmX-h8o7_400x400.jpeg"/-->
             <!--span class="icon-cog float-right"></span-->
-        </header>
-        <div class="wrapper">
-            <nav>
+            
+            <nav class="visible">
+                <div class="header">
+                    <div class="dissmiss">&#10005;</div>
+                    Booterfly <small>Contents</small>
+                </div>
                 <ul>
-                    <li><a href="index.html">Getting strated</a></li>
-                    <li><a href="structure.html">Structure</a></li>
-                    <li><a href="form.html">Form</a></li>
-                    <li><a href="components.html">Components</a></li>
+                    <li><a href="index.html"><span class="icon-rocket"></span>Getting strated</a></li>
+                    <li><a href="structure.html"><span class="icon-institution"></span>Structure</a></li>
+                    <li><a href="form.html"><span class="icon-italic"></span>Form</a></li>
+                    <li><a href="components.html"><span class="icon-plus-square"></span>Components</a></li>
                 </ul>
             </nav>
-
+            <div class="opacity-bg"></div>
+        </header>
+        <div class="wrapper">
             <h1>Booterfly</h1>
             <p>Booterfly is a CSS framework that allows you to start your web projects and make them look as awesome as they are.</p>
             <p>To do so, we provide tools that will simplify your work. That way you will be able to concentrate on what is more important: Make your dreams come true.</p>

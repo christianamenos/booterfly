@@ -51,24 +51,128 @@ header{
     header{
         padding:0.3em 0.1em;
     }
-    
+
     header + *{
         margin-top:4em !important;
     }
 }
 
-nav{
-    display:none;
+header{
+
+    nav{
+        position:fixed;
+        left:0;
+        top:0;
+        display:none;
+        height:100%;
+        width:280px;
+        z-index:10;
+        text-align:left;
+        border-right:1px solid #eee;
+        background-color:#f5f5f5;
+        color:#454545;
+        
+        .dissmiss{
+            width:1.5em;
+            height:2em;
+            text-align:center;
+            line-height:2em;
+            display:inline-block;
+            font-size:1.5em;
+            margin:0;
+            cursor:pointer;
+            margin-right:0.2em;
+            
+            &:hover{
+                color:rgba(255,255,255,0.8);
+                background-color:$danger-color;
+            }
+        }
+
+        a{
+            color:#454545;
+            
+            &:visited{
+                color:#454545;
+            }
+            
+            &:hover, &:visited:hover{
+                color:#666;
+            }
+        }
+
+        &.shadow{
+            box-shadow:0 1px 10px 5px rgba(0,0,0,0.3);
+        }
+
+        &.visible{
+
+            display:block;
+
+
+            &.dark{
+                background-color:#454545;
+                color:#f5f5f5;
+            }
+
+            & + .opacity-bg{
+                position:fixed;
+                top:0;
+                left:0;
+                display:block;
+                background-color:rgba(255, 255, 255, 0.6);
+                z-index:9;
+                width:100%;
+                height:100%;
+            }
+        }
+
+        nav.flat{
+
+        }
+
+        ul{
+            list-style:none;
+            margin:0;
+            
+            li{
+                margin-bottom:0;
+                border-bottom:1px solid #ededed;
+                
+                a{
+                    padding:0.2em 0.5em;
+                    display:inline-block;
+                    width:100%;
+                    
+                    &:hover,&:hover:visited{
+                        background-color:$info-color;
+                        color:#fff;
+                    }
+                    
+                    [class*="icon-"]{
+                        text-align:center;
+                        width:2.3em;
+                        margin-left:-0.4em;
+                    }
+                }
+            }
+        }
+
+        .header{
+            line-height:2.2em;
+            /*background-color:#fbfbfb;*/
+            top:0;
+            left:0;
+            width:100%;
+            border-bottom:1px solid #eee;
+        }
+    }
 }
 
-nav{
-    
+
+[data-toggle]{
+    cursor:pointer;
 }
-
-nav.flat{
-
-}
-
 
 
 /*
