@@ -7,19 +7,20 @@
         <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport">
         <link type="image/x-icon" href="../img/favicon.ico" rel="shortcut icon">
         <link type="text/css" rel="stylesheet" href="css/screen.css">
-
+        <script src="vendors/jquery/dist/jquery.min.js"></script>
         <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <script src="js/booterfly.js"></script>
     </head>
     <body>
         <header>
-            <span class="icon-reorder float-left"></span>
+            <span class="icon-reorder float-left" data-toggle="#main-nav, #nav-bg"></span>
             <h1>Booterfly <small>CSS Framework</small></h1>
             <!--img class="logo profile circle" src="https://pbs.twimg.com/profile_images/518533207180865538/MmX-h8o7_400x400.jpeg"/-->
             <!--span class="icon-cog float-right"></span-->
             
-            <nav class="visible">
+            <nav id="main-nav">
                 <div class="header">
-                    <div class="dissmiss">&#10005;</div>
+                    <div class="dissmiss" data-toggle="#main-nav, #nav-bg">&#10005;</div>
                     Booterfly <small>Contents</small>
                 </div>
                 <ul>
@@ -29,7 +30,7 @@
                     <li><a href="components.html"><span class="icon-plus-square"></span>Components</a></li>
                 </ul>
             </nav>
-            <div class="opacity-bg"></div>
+            <div class="opacity-bg" id="nav-bg"></div>
         </header>
         <!--img src="https://dl.dropboxusercontent.com/u/3364213/img.jpg" class="blur col-4" title="Test tooltip"/-->
         <div class="wrapper">
